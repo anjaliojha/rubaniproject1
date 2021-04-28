@@ -10,8 +10,13 @@ class Launcher{
          this.launcher = Constraint.create(options);
          World.add(world, this.launcher);
         }
-        fly(){
+
+    fly(){
            this.launcher.bodyA=null;
+         }
+
+         attach(body){
+             this.launcher.bodyA=body;
          }
      display(){
          if(this.launcher.bodyA){
